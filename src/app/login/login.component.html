@@ -9,14 +9,16 @@
         <hr>
   <div class=" form-group">
     <label for="inputdefault">User Name</label>
-    <input class="form-control" [(ngModel)]="UserName" name="UserName"  type="text" >
-      {{UserName}}
+    <input class="form-control" [(ngModel)]="login.UserName" name="UserName"  type="text" >
+ 
   </div>
 
 <div class="form-group">
     <label for="inputdefault">Password</label>
-    <input class="form-control" [(ngModel)]="Password" name="Password"  type="password" >
+    <input class="form-control" [(ngModel)]="login.Password" name="Password"  type="password" >
   </div>
-<button type="button" class="btn btn-primary col-md-2 MoveButton">Login</button>
+  <div style="text-align: center; color: red">{{ErrorValue}}</div>
+<button type="button" (click)=LoginFrom() class="btn btn-primary col-md-2 MoveButton">Login</button>
+
    </div>
 </form>

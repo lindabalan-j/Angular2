@@ -4,22 +4,29 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AlertModule } from 'ng2-bootstrap';
 
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-
+import { AppRoutingModule } from './app.route';
+import {DashComponent} from './Dash'
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    DashComponent
+    // ,
+    // AppRoutingModule
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
-  bootstrap: [LoginComponent]
+  
+  bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
